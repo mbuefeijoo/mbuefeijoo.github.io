@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
             color: #fff;
             overflow: hidden;
         }
+
         header {
             background: linear-gradient(135deg, #0077b6, #023e8a);
             color: white;
@@ -22,11 +24,13 @@
             position: relative;
             overflow: hidden;
         }
+
         header h1 {
             margin: 0;
             font-size: 2.5rem;
             animation: fadeIn 2s ease-in-out;
         }
+
         nav {
             display: flex;
             justify-content: center;
@@ -38,6 +42,7 @@
             top: 0;
             z-index: 1000;
         }
+
         nav a {
             color: white;
             text-decoration: none;
@@ -46,10 +51,12 @@
             border-radius: 5px;
             transition: background 0.3s ease, transform 0.3s ease;
         }
+
         nav a:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-5px);
         }
+
         section {
             max-width: 800px;
             margin: 2rem auto;
@@ -60,20 +67,24 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         section:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
         }
+
         h2 {
             color: #0077b6;
             font-size: 2rem;
             margin-bottom: 1rem;
             animation: slideIn 1s ease-in-out;
         }
+
         ul {
             list-style: none;
             padding: 0;
         }
+
         ul li {
             margin: 1rem 0;
             padding: 0.5rem;
@@ -81,10 +92,12 @@
             border-radius: 5px;
             transition: background 0.3s ease, transform 0.3s ease;
         }
+
         ul li:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateX(10px);
         }
+
         footer {
             background: linear-gradient(135deg, #0077b6, #023e8a);
             color: white;
@@ -94,18 +107,32 @@
             position: relative;
             overflow: hidden;
         }
+
         footer p {
             margin: 0;
             animation: fadeIn 2s ease-in-out;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         @keyframes slideIn {
-            from { transform: translateX(-100%); }
-            to { transform: translateX(0); }
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
         }
+
         .background {
             position: fixed;
             top: 0;
@@ -116,20 +143,33 @@
             background: radial-gradient(circle, rgba(0, 119, 182, 0.1), rgba(2, 62, 138, 0.1));
             animation: moveBackground 20s linear infinite;
         }
+
         #backgroundCanvas {
-          position: fixed;
-          top: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         z-index: -2; /* Más atrás que el fondo */
-          pointer-events: none; /* Evita que interfiera con clics */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            /* Más atrás que el fondo */
+            pointer-events: none;
+            /* Evita que interfiera con clics */
         }
+
         @keyframes moveBackground {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
+
         .cursor-effect {
             position: absolute;
             width: 20px;
@@ -140,18 +180,31 @@
             transform: translate(-50%, -50%);
             animation: pulse 1s infinite;
         }
+
         @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.5); opacity: 0.5; }
-            100% { transform: scale(1); opacity: 1; }
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
     </style>
 </head>
+
 <body>
     <canvas id="backgroundCanvas"></canvas>
     <div class="background"></div>
     <div class="cursor-effect" id="cursor"></div>
-    
+
     <header>
         <h1>ODS 1: Poner fin a la pobreza</h1>
     </header>
@@ -165,7 +218,8 @@
     </nav>
     <section id="introduccion">
         <h2>Introducción</h2>
-        <p>El Objetivo de Desarrollo Sostenible 1 busca erradicar la pobreza en todas sus formas para el 2030. Este objetivo global es fundamental para lograr estabilidad social, crecimiento económico y cohesión global.</p>
+        <p>El Objetivo de Desarrollo Sostenible 1 busca erradicar la pobreza en todas sus formas para el 2030. Este
+            objetivo global es fundamental para lograr estabilidad social, crecimiento económico y cohesión global.</p>
     </section>
     <section id="causas">
         <h2>Causas de la Pobreza</h2>
@@ -177,7 +231,8 @@
     </section>
     <section id="importancia">
         <h2>Importancia de Erradicar la Pobreza</h2>
-        <p>La pobreza afecta directamente la estabilidad social y económica global. Su erradicación es clave para una sociedad más justa y sostenible.</p>
+        <p>La pobreza afecta directamente la estabilidad social y económica global. Su erradicación es clave para una
+            sociedad más justa y sostenible.</p>
     </section>
     <section id="estrategias">
         <h2>Estrategias Clave</h2>
@@ -206,7 +261,7 @@
     <footer>
         <p>Proyecto sobre el ODS 1: Diseñado para inspirar acción global. &copy; 2025</p>
     </footer>
-    
+
     <script>
         const cursor = document.getElementById('cursor');
         document.addEventListener('mousemove', (e) => {
@@ -214,73 +269,74 @@
             cursor.style.top = e.pageY + 'px';
         });
         const canvas = document.getElementById('backgroundCanvas');
-    const ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext('2d');
 
-    function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    let particles = [];
-
-    class Particle {
-    constructor(x, y, size, color, speedX, speedY) {
-        this.x = x;
-        this.y = y;
-        this.size = size;
-        this.color = color;
-        this.speedX = speedX;
-        this.speedY = speedY;
-        this.opacity = 1; // Opacidad inicial (totalmente visible)
-    }
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        
-        if (this.size > 0.2) this.size -= 0.02; 
-        this.opacity -= 0.01; // Reducir opacidad poco a poco
-
-        if (this.opacity <= 0) this.opacity = 0; // Evitar valores negativos
-    }
-    draw() {
-        ctx.globalAlpha = this.opacity; // Aplicar opacidad
-        ctx.fillStyle = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.globalAlpha = 1; // Restaurar opacidad para otros elementos
-    }
-    }
-
-    function createParticles(x, y) {
-        const colors = ['#ff5733', '#ffbd33', '#33ff57', '#33aaff', '#a833ff'];
-        for (let i = 0; i < 5; i++) {
-            let size = Math.random() * 8 + 3;
-            let color = colors[Math.floor(Math.random() * colors.length)];
-            let speedX = (Math.random() - 0.5) * 2;
-            let speedY = (Math.random() - 0.5) * 2;
-            particles.push(new Particle(x, y, size, color, speedX, speedY));
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         }
-    }
 
-    function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach((particle, index) => {
-            particle.update();
-            particle.draw();
-            if (particle.opacity <= 0) particles.splice(index, 1);
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        let particles = [];
+
+        class Particle {
+            constructor(x, y, size, color, speedX, speedY) {
+                this.x = x;
+                this.y = y;
+                this.size = size;
+                this.color = color;
+                this.speedX = speedX;
+                this.speedY = speedY;
+                this.opacity = 1; // Opacidad inicial (totalmente visible)
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.size > 0.2) this.size -= 0.02;
+                this.opacity -= 0.01; // Reducir opacidad poco a poco
+
+                if (this.opacity <= 0) this.opacity = 0; // Evitar valores negativos
+            }
+            draw() {
+                ctx.globalAlpha = this.opacity; // Aplicar opacidad
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.globalAlpha = 1; // Restaurar opacidad para otros elementos
+            }
+        }
+
+        function createParticles(x, y) {
+            const colors = ['#ff5733', '#ffbd33', '#33ff57', '#33aaff', '#a833ff'];
+            for (let i = 0; i < 5; i++) {
+                let size = Math.random() * 8 + 3;
+                let color = colors[Math.floor(Math.random() * colors.length)];
+                let speedX = (Math.random() - 0.5) * 2;
+                let speedY = (Math.random() - 0.5) * 2;
+                particles.push(new Particle(x, y, size, color, speedX, speedY));
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach((particle, index) => {
+                particle.update();
+                particle.draw();
+                if (particle.opacity <= 0) particles.splice(index, 1);
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('mousemove', (event) => {
+            createParticles(event.clientX, event.clientY);
         });
-        requestAnimationFrame(animate);
-    }
 
-    window.addEventListener('mousemove', (event) => {
-        createParticles(event.clientX, event.clientY);
-    });
-
-    animate();
+        animate();
     </script>
 </body>
+
 </html>
