@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST</title>
+    <title>El Objetivo de Desarrollo Sostenible (ODS) 1</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -71,20 +71,47 @@
             animation: slideIn 1s ease-in-out;
         }
         ul {
-            list-style: none;
-            padding: 0;
+        list-style: none;
+        padding: 0;
         }
+
         ul li {
             margin: 1rem 0;
             padding: 0.5rem;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 5px;
             transition: background 0.3s ease, transform 0.3s ease;
+            position: relative;
+            cursor: pointer;
         }
+
+        /* Efecto al pasar el ratón sobre <li> */
         ul li:hover {
             background: rgba(255, 255, 255, 0.1);
             transform: translateX(10px);
         }
+
+        /* Estilos para ocultar los <p> por defecto */
+        ul li + p {
+            max-height: 0;   /* Ocultar el texto sin dejar espacio */
+            opacity: 0;
+            transform: scale(0.8);
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+            overflow: hidden;
+            display: block;
+        }
+
+        /* Al pasar el mouse sobre el <li>, todos sus <p> debajo se muestran */
+        ul li:hover + p {
+            max-height: 200px; /* Altura suficiente para mostrar el contenido */
+            opacity: 1;
+            transform: scale(1);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            padding: 0.5rem;
+        }
+
+
+
         footer {
             background: linear-gradient(135deg, #0077b6, #023e8a);
             color: white;
@@ -165,7 +192,10 @@
     </nav>
     <section id="introduccion">
         <h2>Introducción</h2>
-        <p>El Objetivo de Desarrollo Sostenible 1 busca erradicar la pobreza en todas sus formas para el 2030. Este objetivo global es fundamental para lograr estabilidad social, crecimiento económico y cohesión global.</p>
+        <p>El Objetivo de Desarrollo Sostenible (ODS) 1, "Poner fin a la pobreza en todas sus formas en 
+            todo el mundo", es una meta ambiciosa que busca erradicar la pobreza extrema y reducir 
+            sustancialmente la pobreza en general para 2030. Aquí se resumirán los puntos clave y 
+            estrategias para alcanzarlo. </p>
     </section>
     <section id="causas">
         <h2>Causas de la Pobreza</h2>
@@ -177,22 +207,44 @@
     </section>
     <section id="importancia">
         <h2>Importancia de Erradicar la Pobreza</h2>
-        <p>La pobreza afecta directamente la estabilidad social y económica global. Su erradicación es clave para una sociedad más justa y sostenible.</p>
+        <ul><li>Impacto global:</li>
+        <p>La pobreza afecta a la estabilidad social, el crecimiento económico y la 
+            cohesión social, pudiendo generar tensiones políticas y conflictos.     </p>
+        <ul><li>Interdependencia:</li>
+        <p> Nuestro bienestar está vinculado al de las personas que viven en pobreza.</p></ul>
     </section>
     <section id="estrategias">
         <h2>Estrategias Clave</h2>
         <ul>
-            <li><strong>Protección Social:</strong> Diseñar sistemas universales y sostenibles.</li>
-            <li><strong>Movilización de Recursos:</strong> Impulsar la cooperación internacional.</li>
-            <li><strong>Innovación:</strong> Promover tecnología para acceso a servicios básicos.</li>
+            <li><strong>Protección Social:</strong></li>
+            <p>Diseñar e implementar sistemas universales y sostenibles para reducir la vulnerabilidad.
+            <br>Expandir programas para incluir a los más desfavorecidos, como jóvenes, ancianos y personas en situaciones críticas.
+            </p>
+            <p> </p>
+            <li><strong>Acciones específicas al 2030:</strong></li>
+            <p>Erradicar la pobreza extrema (menos de 2,15 USD/día). 
+            <br>Reducir a la mitad la pobreza general según definiciones nacionales. 
+            <br>Asegurar igualdad en el acceso a recursos económicos y servicios básicos. 
+            <br>Fortalecer la resiliencia frente a desastres y riesgos climáticos. </p>
+            <li><strong>Movilización de recursos:</strong></li>
+            <p>Aumentar la cooperación internacional.
+            <br>Implementar políticas y programas centrados en el desarrollo inclusivo. </p>
+            <li><strong>Innovación y tecnología:</strong></li>
+            <p>Promover avances científicos para mejorar el acceso a recursos básicos como agua, saneamiento y educación. </p>
         </ul>
     </section>
     <section id="desafios">
         <h2>Desafíos Actuales</h2>
         <ul>
             <li>Impacto de la COVID-19 en la pobreza extrema.</li>
+            <p>Retrocesos en la reducción de la pobreza y un aumento 
+                significativo de personas en pobreza extrema. </p>
             <li>Desigualdad en el gasto público.</li>
+            <p> Mayores inversiones en países desarrollados 
+                comparadas con economías emergentes. </p>
             <li>Incremento en la inseguridad alimentaria.</li>
+            <p>Incremento en los precios de alimentos y en la 
+                inseguridad alimentaria.</p>
         </ul>
     </section>
     <section id="medidas">
